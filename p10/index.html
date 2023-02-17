@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAb 10</title>
+    <link rel="manifest" href="manifest.json"/>
+
+
+</head>
+<body>
+<div id="details" style="border: 1px solid black;" >
+    </div>
+    <script>
+
+        if("serviceWorker" in navigator)
+        {
+            navigator.serviceWorker
+            .register("sw.js")
+            .then((reg)=>console.log("Register error"))
+            .catch((err)=>console.log("Err"));
+        }
+        else{
+            console.log("No service worker")
+        }
+    
+            fetch('data.json')
+            
+                .then((res)=>{
+                    return res.json();
+                })
+            
+                .then((lab)=>{
+                    var table = "<table>"
+                        table += "<tr><th>Company</th><th>Description </th><th> Initial Price </th><th>Price 2002</th><th>Price 2007</th></tr>";
+                        for(item of lab){
+                            table += "<tr><td>"+item.company+"</td><td>"+item.description+" </td><td>"+ item.price+" </td><td>"+item.price_2002+"</td><td>"+item.price_2007+"</td></tr>";
+
+                        }
+                        table +="</table>";
+                        document.getElementById("details").innerHTML=table;
+                })
+
+    </script>
+</body>
+</html>

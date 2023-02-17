@@ -1,0 +1,30 @@
+[
+    {
+        "company":"Lenovo",
+        "description":"It was a great company",
+        "price":"50.42",
+        "price_2002":"35.80",
+        "price_2007":"40.50"
+    },
+    {
+        "company":"HP",
+        "description":"It was a good company",
+        "price":"50.42",
+        "price_2002":"35.80",
+        "price_2007":"40.50"
+    },
+    {
+        "company":"Dell",
+        "description":"It was a Amazing company",
+        "price":"50.42",
+        "price_2002":"35.80",
+        "price_2007":"40.50"
+    },
+    {
+        "company":"Nokia",
+        "description":"It is a Mobile Phone Company",
+        "price":"50.42",
+        "price_2002":"35.80",
+        "price_2007":"40.50"
+    }
+]
